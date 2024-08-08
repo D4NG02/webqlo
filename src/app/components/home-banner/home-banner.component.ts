@@ -1,15 +1,16 @@
-import { NgFor, NgIf } from '@angular/common';
+import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common'
 import { ThemeDirective, CarouselComponent, CarouselIndicatorsComponent, CarouselInnerComponent, CarouselItemComponent, CarouselCaptionComponent } from '@coreui/angular';
 
 @Component({
-  imports: [NgFor, NgIf, NgOptimizedImage, ThemeDirective, CarouselComponent, CarouselIndicatorsComponent, CarouselInnerComponent, CarouselItemComponent, CarouselCaptionComponent],
+  imports: [NgClass, NgFor, NgIf, NgOptimizedImage, ThemeDirective, CarouselComponent, CarouselIndicatorsComponent, CarouselInnerComponent, CarouselItemComponent, CarouselCaptionComponent],
   selector: 'app-banner',
   standalone: true,
-  templateUrl: './banner.component.html'
+  templateUrl: './home-banner.component.html',
+  styleUrl: './home-banner.component.css'
 })
-export class AppBanner implements OnInit {
+export class HomeBannerComponent implements OnInit {
   slides: { id: number, bannerMobile: string, bannerDesktop: string, title: string[], subtitle: string, aElement: { text: string, href: string } }[] = new Array(4)
 
   ngOnInit(): void {
@@ -43,7 +44,7 @@ export class AppBanner implements OnInit {
       subtitle: 'Power your digital marketing effort with Adqlo, our proprietary social media intelligence platform.',
       aElement: {
         text: 'Discover More',
-        href: '/brand-social-report'
+        href: '/social-media-intelligence'
       }
     };
     this.slides[3] = {
@@ -54,7 +55,7 @@ export class AppBanner implements OnInit {
       subtitle: '',
       aElement: {
         text: 'Discover More',
-        href: '/brand-social-report'
+        href: '/who-we-are'
       }
     };
   }

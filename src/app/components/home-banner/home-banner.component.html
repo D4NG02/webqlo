@@ -1,9 +1,9 @@
 <div class="banner-section bg-[#f6f2f9]">
     <div class="owl-stage-outer">
-        <c-carousel (itemChange)="onItemChange($event)" [interval]="0" transition="slide"
+        <c-carousel [interval]="0" transition="slide"
             class="h-[85vh] max-h-[700px] min-h-[600px]">
             <c-carousel-inner class="h-full">
-                <c-carousel-item *ngFor="let slide of slides" class="{{slide.id == 3 && 'bg-[#101113]'}}">
+                <c-carousel-item *ngFor="let slide of slides" [ngClass]="{'bg-[#101113]': slide.id == 3}">
                     <!-- First card -->
                     <div *ngIf="slide.id==0" class="relative h-[85vh] max-h-[700px] min-h-[600px] flex items-center py-20 flex-col gap-14
                                                     sm:gap-12 sm:py-[50px]
@@ -51,8 +51,8 @@
                         <c-carousel-caption
                             class="top-0 bottom-[unset] right-[unset] left-[unset] w-full px-3.5 py-7 lg:w-[80%] lg:mx-[10%]">
                             <div
-                                class="max-h-[700px] min-h-[600px] py-0 mx-[4%] md:w-11/12 lg:flex lg:items-center
-                                        lg:w-6/12 {{slide.id==1 ? 'lg:ml-[50%]' : 'lg:ml-14 lg:mr-[50%] text-[#294995]'}} lg:h-full">
+                                class="max-h-[700px] min-h-[600px] py-0 mx-[4%] md:w-11/12 lg:flex lg:items-center lg:w-6/12 lg:h-full"
+                                [ngClass]="{'lg:ml-[50%]': slide.id == 1, 'lg:ml-14 lg:mr-[50%] text-[#294995]': slide.id == 2}">
                                 <div
                                     class="h-full flex flex-col items-center gap-7.5
                                             sm:gap-6 md:gap-7 lg:justify-center lg:items-start lg:min-w-[480px] lg:max-w-[600px]">
@@ -71,13 +71,13 @@
                                         {{slide.subtitle}}</p>
                                     <a *ngIf="slide.id==1" href="{{slide.aElement.href}}"
                                         class="w-fit bg-white border-b-[3px] border-r-[3px] border-[#284b8b]
-                                                                                                    font-bold text-[16px] py-[12px] px-7 text-[#1d202f] tracking-wider
-                                                                                                    sm:text-[19.2px] sm:py-[10px] sm:px-[50px]"
+                                                font-bold text-[16px] py-[12px] px-7 text-[#1d202f] tracking-wider
+                                                sm:text-[19.2px] sm:py-[10px] sm:px-[50px]"
                                         style="box-shadow: 3px 3px 0 0 white;">{{slide.aElement.text}}</a>
                                     <a *ngIf="slide.id==2" href="{{slide.aElement.href}}"
                                         class="w-fit bg-[#1d202f] text-white border-b-[3px] border-r-[3px] border-[#46d2f0]
-                                                                                                    font-bold text-[16px] py-[12px] px-7 tracking-wider
-                                                                                                    sm:text-[19.2px] sm:py-[10px] sm:px-[50px]"
+                                                font-bold text-[16px] py-[12px] px-7 tracking-wider
+                                                sm:text-[19.2px] sm:py-[10px] sm:px-[50px]"
                                         style="box-shadow: 3px 3px 0 0 #1d202f;">{{slide.aElement.text}}</a>
                                 </div>
                             </div>
@@ -97,8 +97,7 @@
                                 loading="lazy" />
                         </div>
                         <c-carousel-caption class="h-fit bottom-[unset] right-[unset] left-[unset] py-0 mx-[4.2%] my-3 top-[71vw]
-                                                    sm:top-[42vw] sm:mx-4
-                                                    md:top-[36vw]
+                                                    sm:top-[42vw] sm:mx-4 md:top-[36vw]
                                                     lg:top-[unset] lg:bottom-[170px] lg:w-full lg:max-w-[980px]
                                                     xl:top-[unset] xl:bottom-[60px] xl:mx-0 xl:px-5">
                             <div class="h-full flex flex-col justify-center gap-[38px]">
