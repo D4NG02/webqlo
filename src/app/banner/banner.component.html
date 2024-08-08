@@ -1,0 +1,132 @@
+<div class="banner-section bg-[#f6f2f9]">
+    <div class="owl-stage-outer">
+        <c-carousel (itemChange)="onItemChange($event)" [interval]="0" transition="slide"
+            class="h-[85vh] max-h-[700px] min-h-[600px]">
+            <c-carousel-inner class="h-full">
+                <c-carousel-item *ngFor="let slide of slides" class="{{slide.id == 3 && 'bg-[#101113]'}}">
+                    <!-- First card -->
+                    <div *ngIf="slide.id==0" class="relative h-[85vh] max-h-[700px] min-h-[600px] flex items-center py-20 flex-col gap-14
+                                                    sm:gap-12 sm:py-[50px]
+                                                    md:flex-row-reverse md:gap-0 md:justify-center
+                                                    xl:max-w-[1500px] xl:mx-auto">
+                        <div class="flex justify-center md:w-9/12 md:max-h-full">
+                            <img src="{{slide.bannerMobile}}" alt="{{slide.title}}"
+                                class="object-cover w-full sm:w-10/12 md:w-8/12 md:hidden" loading="lazy" />
+                            <img src="{{slide.bannerDesktop}}" alt="{{slide.title}}"
+                                class="hidden object-cover md:block md:w-full" loading="lazy" />
+                        </div>
+                        <c-carousel-caption class="relative bottom-[unset] right-[unset] left-[unset] lg:px-4">
+                            <div class="h-full py-0
+                                        md:pl-4 md:flex md:flex-col
+                                        lg:min-w-[262px] lg:w-fit lg:mx-auto
+                                        xl:ml-auto xl:mr-0">
+                                <div class="font-bold mb-8 bg-gradient-to-r from-[#2880ef] to-[#f432bb] bg-clip-text text-transparent text-[32px] 
+                                            md:text-left md:text-[40px] md:leading-[52px]
+                                            lg:text-[56px] lg:leading-[72px]
+                                            xl:text-left xl:text-[62px] xl:leading-[90px]"
+                                    style="-webkit-text-fill-color: transparent">
+                                    Download
+                                    <br class="hidden md:block" />
+                                    Free Report
+                                    <br />
+                                    in 60 Secs
+                                </div>
+                                <a href="{{slide.aElement.href}}" class="w-fit bg-[#1d202f] border-b-[3px] border-r-[3px]
+                                                                            border-white font-bold text-[16px] py-[12px] px-7 tracking-wider
+                                                                            sm:text-[19.2px] sm:py-[10px] sm:px-[30px]"
+                                    style="box-shadow: 3px 3px 0 0 #1d202f;">{{slide.aElement.text}}</a>
+                            </div>
+                        </c-carousel-caption>
+                    </div>
+                    <!-- 2nd & 3rd card -->
+                    <div *ngIf="slide.id==1 || slide.id==2" class="relative">
+                        <div>
+                            <img src="{{slide.bannerMobile}}" alt="{{slide.title}}"
+                                class="object-cover h-[85vh] max-h-[700px] min-h-[600px] w-full lg:hidden"
+                                loading="lazy" />
+                            <img src="{{slide.bannerDesktop}}" alt="{{slide.title}}"
+                                class="object-cover h-[85vh] max-h-[700px] min-h-[600px] w-full hidden lg:block"
+                                loading="lazy" />
+                        </div>
+                        <c-carousel-caption
+                            class="top-0 bottom-[unset] right-[unset] left-[unset] w-full px-3.5 py-7 lg:w-[80%] lg:mx-[10%]">
+                            <div
+                                class="max-h-[700px] min-h-[600px] py-0 mx-[4%] md:w-11/12 lg:flex lg:items-center
+                                        lg:w-6/12 {{slide.id==1 ? 'lg:ml-[50%]' : 'lg:ml-14 lg:mr-[50%] text-[#294995]'}} lg:h-full">
+                                <div
+                                    class="h-full flex flex-col items-center gap-7.5
+                                            sm:gap-6 md:gap-7 lg:justify-center lg:items-start lg:min-w-[480px] lg:max-w-[600px]">
+                                    <p class="uppercase lg:text-left">
+                                        <b
+                                            class="font-bold text-[27.04px] sm:text-[41.60px] lg:text-[52px]">{{slide.title[0]}}</b>
+                                        <br />
+                                        <span class="text-[20.8px] leading-[26px]
+                                                            sm:text-[32px] sm:leading-[33px]
+                                                            lg:text-[40px] lg:leading-[52px]">{{slide.title[1]}}</span>
+                                    </p>
+                                    <p
+                                        class="w-[90%] max-w-[550px] text-[17.6px] font-sans leading-6
+                                                        sm:leading-7 sm:text-[20.8px] sm:mt-2
+                                                        lg:w-full lg:max-w-none lg:text-left lg:text-[28.8px] lg:leading-[37px]">
+                                        {{slide.subtitle}}</p>
+                                    <a *ngIf="slide.id==1" href="{{slide.aElement.href}}"
+                                        class="w-fit bg-white border-b-[3px] border-r-[3px] border-[#284b8b]
+                                                                                                    font-bold text-[16px] py-[12px] px-7 text-[#1d202f] tracking-wider
+                                                                                                    sm:text-[19.2px] sm:py-[10px] sm:px-[50px]"
+                                        style="box-shadow: 3px 3px 0 0 white;">{{slide.aElement.text}}</a>
+                                    <a *ngIf="slide.id==2" href="{{slide.aElement.href}}"
+                                        class="w-fit bg-[#1d202f] text-white border-b-[3px] border-r-[3px] border-[#46d2f0]
+                                                                                                    font-bold text-[16px] py-[12px] px-7 tracking-wider
+                                                                                                    sm:text-[19.2px] sm:py-[10px] sm:px-[50px]"
+                                        style="box-shadow: 3px 3px 0 0 #1d202f;">{{slide.aElement.text}}</a>
+                                </div>
+                            </div>
+                        </c-carousel-caption>
+                    </div>
+                    <!-- 4th card -->
+                    <div *ngIf="slide.id==3"
+                        class="relative h-[85vh] max-h-[700px] min-h-[600px] lg:mx-auto lg:flex lg:justify-center xl:max-w-[80%]">
+                        <div class="xl:max-w-[1280px]">
+                            <img src="{{slide.bannerMobile}}" alt="{{slide.title}}"
+                                class="object-cover h-auto max-h-[700px] w-full pt-[25%] sm:pt-[10%] md:hidden"
+                                loading="lazy" />
+                            <img src="{{slide.bannerDesktop}}" alt="{{slide.title}}" class="object-cover hidden
+                                        md:block md:pt-[8%] md:h-auto md:w-[80%] md:mx-[10%]
+                                        lg:pt-0 lg:w-full lg:max-w-[80%]
+                                        xl:w-full xl:max-w-none xl:mx-0 xl:max-h-[570px] xl:object-fill"
+                                loading="lazy" />
+                        </div>
+                        <c-carousel-caption class="h-fit bottom-[unset] right-[unset] left-[unset] py-0 mx-[4.2%] my-3 top-[71vw]
+                                                    sm:top-[42vw] sm:mx-4
+                                                    md:top-[36vw]
+                                                    lg:top-[unset] lg:bottom-[170px] lg:w-full lg:max-w-[980px]
+                                                    xl:top-[unset] xl:bottom-[60px] xl:mx-0 xl:px-5">
+                            <div class="h-full flex flex-col justify-center gap-[38px]">
+                                <p class="uppercase text-left">
+                                    <span class="text-xl leading-[31px]
+                                                sm:text-[32px] sm:leading-[48px]
+                                                lg:text-[40px] lg:leading-[60px]
+                                                xl:text-[32px] xl:leading-[48px]">{{slide.title[0]}}</span>
+                                    <br />
+                                    <b class="text-[29.12px] leading-10
+                                                sm:text-[44px] sm:leading-[68px]
+                                                lg:text-[56px] lg:leading-[84px]
+                                                xl:text-[45px] xl:leading-[68px]">{{slide.title[1]}}</b>
+                                </p>
+                                <p *ngIf="slide.subtitle"
+                                    class="text-[17.6px] mb-11 mt-7 leading-6 sm:leading-7 sm:mt-[33px] sm:mb-[30px] sm:text-[20.8px]">
+                                    {{slide.subtitle}}</p>
+                                <a href="{{slide.aElement.href}}"
+                                    class="w-fit bg-white border-b-[3px] border-r-[3px] border-[#1d202f]
+                                            font-bold text-[16px] py-[10px] px-7 text-[#1d202f] tracking-wider
+                                            sm:text-[19.2px] sm:py-[10px] sm:px-[50px]"
+                                    style="box-shadow: 3px 3px 0 0 white;">{{slide.aElement.text}}</a>
+                            </div>
+                        </c-carousel-caption>
+                    </div>
+                </c-carousel-item>
+            </c-carousel-inner>
+            <c-carousel-indicators></c-carousel-indicators>
+        </c-carousel>
+    </div>
+</div>
