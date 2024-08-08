@@ -7,6 +7,10 @@
 
 
 @layer base {
+    * {
+        user-select: none;
+    }
+
     :root {
         --color-text-white: #FAFAFA;
         --color-text-black: #1b1b1b;
@@ -19,7 +23,7 @@
         text-decoration: none;
     }
 
-    img{
+    img {
         max-width: unset;
     }
 }
@@ -29,6 +33,7 @@
     gap: 8px;
     margin-bottom: 10px;
 }
+
 .carousel-indicators .ng-star-inserted {
     background-color: grey;
     opacity: unset;
@@ -36,6 +41,7 @@
     width: 10px;
     height: 10px;
 }
+
 .carousel-indicators .active.ng-star-inserted {
     background-color: #90a4e4;
 }
