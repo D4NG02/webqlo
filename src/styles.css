@@ -1,4 +1,5 @@
 @import url("https://unpkg.com/@coreui/coreui/dist/css/coreui.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -10,6 +11,7 @@
         --color-text-white: #FAFAFA;
         --color-text-black: #1b1b1b;
         --color-text-black-light: #3b3b3b;
+        --cui-font-sans-serif: "Oswald", sans-serif;
     }
 
     a {
@@ -20,4 +22,20 @@
     img{
         max-width: unset;
     }
+}
+
+
+.carousel-indicators {
+    gap: 8px;
+    margin-bottom: 10px;
+}
+.carousel-indicators .ng-star-inserted {
+    background-color: grey;
+    opacity: unset;
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+}
+.carousel-indicators .active.ng-star-inserted {
+    background-color: #90a4e4;
 }
