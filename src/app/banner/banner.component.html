@@ -3,7 +3,7 @@
         <c-carousel (itemChange)="onItemChange($event)" [interval]="0" transition="slide"
             class="h-[85vh] max-h-[700px] min-h-[600px]">
             <c-carousel-inner class="h-full">
-                <c-carousel-item *ngFor="let slide of slides" class="h-full {{slide.id == 3 && 'bg-[#101113]'}}">
+                <c-carousel-item *ngFor="let slide of slides" class="{{slide.id == 3 && 'bg-[#101113]'}}">
                     <!-- First card -->
                     <div *ngIf="slide.id==0" class="relative h-[85vh] max-h-[700px] min-h-[600px] flex items-center py-20 flex-col gap-14
                                                     sm:gap-12 sm:py-[50px]
@@ -85,7 +85,7 @@
                     </div>
                     <!-- 4th card -->
                     <div *ngIf="slide.id==3"
-                        class="relative h-[85vh] lg:mx-auto lg:flex lg:justify-center xl:max-w-[80%]">
+                        class="relative h-[85vh] max-h-[700px] min-h-[600px] lg:mx-auto lg:flex lg:justify-center xl:max-w-[80%]">
                         <div class="xl:max-w-[1280px]">
                             <img src="{{slide.bannerMobile}}" alt="{{slide.title}}"
                                 class="object-cover h-auto max-h-[700px] w-full pt-[25%] sm:pt-[10%] md:hidden"
@@ -99,8 +99,8 @@
                         <c-carousel-caption class="h-fit bottom-[unset] right-[unset] left-[unset] py-0 mx-[4.2%] my-3 top-[71vw]
                                                     sm:top-[42vw] sm:mx-4
                                                     md:top-[36vw]
-                                                    lg:top-[unset] lg:bottom-[236px] lg:w-full lg:max-w-[980px]
-                                                    xl:top-[unset] xl:bottom-[120px] xl:mx-0 xl:px-5">
+                                                    lg:top-[unset] lg:bottom-[170px] lg:w-full lg:max-w-[980px]
+                                                    xl:top-[unset] xl:bottom-[60px] xl:mx-0 xl:px-5">
                             <div class="h-full flex flex-col justify-center gap-[38px]">
                                 <p class="uppercase text-left">
                                     <span class="text-xl leading-[31px]
