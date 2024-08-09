@@ -1,1 +1,68 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://unpkg.com/@coreui/coreui/dist/css/coreui.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    * {
+        user-select: none;
+    }
+
+    body {
+        font-family: 'Oswald';
+    }
+
+    a {
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    img {
+        max-width: unset;
+    }
+}
+
+
+.carousel-indicators {
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.carousel-indicators .ng-star-inserted {
+    background-color: grey;
+    opacity: unset;
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+}
+
+.carousel-indicators .active.ng-star-inserted {
+    background-color: #90a4e4;
+}
+
+
+.carousel-control-next,
+.carousel-control-prev {
+    opacity: 0.5;
+    top: 40%;
+    padding: 4px;
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+    background-color: grey;
+}
+.carousel-control-next:hover,
+.carousel-control-prev:hover {
+    opacity: 1;
+}
+.carousel-control-next {
+    padding-right: 0px;
+    right: 10px;
+}
+.carousel-control-prev {
+    padding-left: 0px;
+    left: 10px;
+}

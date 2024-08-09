@@ -1,0 +1,26 @@
+<div class="tw-pt-12 tw-pb-16 tw-px-3 tw-text-tw-black tw-bg-white xl:tw-max-w-[80%] xl:tw-mx-auto">
+    <h2 class="tw-py-8 tw-text-xl tw-uppercase tw-text-center tw-font-bold sm:tw-text-3xl md:tw-pb-20">{{title}}</h2>
+    <div class="tw-flex tw-flex-col tw-gap-12 md:tw-grid md:tw-grid-cols-2 md:tw-gap-16 2xl:tw-gap-20">
+        <div *ngFor="let card of cards" [ngClass]="'card-'+card.id">
+            <div class="tw-w-fit tw-flex tw-mx-auto tw-px-3 md:tw-px-0">
+                <video class="tw-object-contain tw-h-72" autoplay loop muted playsInline>
+                    <source [src]="card.video" type="video/mp4" />
+                </video>
+            </div>
+            <a href="/" class="tw-flex tw-flex-col tw-gap-4">
+                <h3 class="tw-bg-gradient-to-r tw-bg-clip-text tw-text-transparent tw-text-black
+                            tw-font-bold tw-w-fit tw-text-xl sm:tw-text-2xl md:tw-text-3xl xl:tw-text-2xl"
+                    [ngClass]="{'tw-from-[#2489ff] tw-to-[#e396ff]': card.id == 0,
+                                'tw-from-[#ca003b] tw-to-[#ff99f0]': card.id == 1,
+                                'tw-from-[#54a4fd] tw-to-[#00a]': card.id == 2,
+                                'tw-from-[#3469ff] tw-to-[#000]': card.id == 3,
+                                'tw-from-[#d4ad45] tw-to-[#580b7c]': card.id == 4,
+                                'tw-from-[#30adfe] tw-to-[#d16eff]': card.id == 5}"
+                    style="-webkit-text-fill-color: transparent">
+                    {{card.title}}
+                </h3>
+                <p class="tw-font-sans tw-text-base xl:tw-text-lg">{{card.description}}</p>
+            </a>
+        </div>
+    </div>
+</div>
