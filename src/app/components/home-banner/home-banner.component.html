@@ -1,79 +1,84 @@
-<div class="banner-section bg-[#f6f2f9]">
+<div class="banner-section tw-bg-[#f6f2f9]">
     <div class="owl-stage-outer">
-        <c-carousel [interval]="0" transition="slide" class="h-[85vh] max-h-[700px] min-h-[600px]">
+        <c-carousel [interval]="0" transition="slide" class="tw-h-[85vh] tw-max-h-[700px] tw-min-h-[600px]">
             <c-carousel-inner class="h-full">
-                <c-carousel-item *ngFor="let slide of slides" [ngClass]="{'bg-[#101113]': slide.id == 3}">
+                <c-carousel-item *ngFor="let slide of slides" [ngClass]="{'tw-bg-blue-dark': slide.id == 3}">
                     <!-- First card -->
-                    <div *ngIf="slide.id==0" class="relative h-[85vh] max-h-[700px] min-h-[600px] flex items-center py-20 flex-col gap-14
-                                                    sm:gap-12 sm:py-[50px]
-                                                    md:flex-row-reverse md:gap-0 md:justify-center
-                                                    xl:max-w-[1500px] xl:mx-auto">
-                        <div class="flex justify-center md:w-9/12 md:max-h-full">
+                    <div *ngIf="slide.id==0" class="tw-relative tw-h-[85vh] tw-max-h-[700px] tw-min-h-[600px]
+                                                    tw-flex tw-items-center tw-py-20 tw-flex-col tw-gap-14
+                                                    sm:tw-gap-12 sm:tw-py-[50px]
+                                                    md:tw-flex-row-reverse md:tw-gap-0 md:tw-justify-center
+                                                    xl:tw-max-w-[1500px] xl:tw-mx-auto">
+                        <div class="tw-flex tw-justify-center md:tw-w-9/12 md:tw-max-h-full">
                             <img src="{{slide.bannerMobile}}" alt="{{slide.title}}"
-                                class="object-cover w-full sm:w-10/12 md:w-8/12 md:hidden" loading="lazy" />
+                                class="tw-object-cover tw-w-full sm:tw-w-10/12 md:tw-w-8/12 md:tw-hidden"
+                                loading="lazy" />
                             <img src="{{slide.bannerDesktop}}" alt="{{slide.title}}"
-                                class="hidden object-cover md:block md:w-full" loading="lazy" />
+                                class="tw-hidden tw-object-cover md:tw-block md:tw-w-full" loading="lazy" />
                         </div>
-                        <c-carousel-caption class="relative bottom-[unset] right-[unset] left-[unset] lg:px-4">
-                            <div class="h-full py-0
-                                        md:pl-4 md:flex md:flex-col
-                                        lg:min-w-[262px] lg:w-fit lg:mx-auto
-                                        xl:ml-auto xl:mr-0">
-                                <div class="font-bold mb-8 bg-gradient-to-r from-[#2880ef] to-[#f432bb] bg-clip-text text-transparent text-[32px] 
-                                            md:text-left md:text-[40px] md:leading-[52px]
-                                            lg:text-[56px] lg:leading-[72px]
-                                            xl:text-left xl:text-[62px] xl:leading-[90px]"
+                        <c-carousel-caption
+                            class="tw-relative tw-bottom-[unset] tw-right-[unset] tw-left-[unset] lg:tw-px-4">
+                            <div class="tw-h-full tw-py-0
+                                        md:tw-pl-4 md:tw-flex md:tw-flex-col
+                                        lg:tw-min-w-[262px] lg:tw-w-fit lg:tw-mx-auto
+                                        xl:tw-ml-auto xl:tw-mr-0">
+                                <div class="tw-font-bold tw-mb-8 tw-bg-gradient-to-r tw-from-[#2880ef] tw-to-[#f432bb]
+                                            tw-bg-clip-text tw-text-transparent tw-text-[32px] 
+                                            md:tw-text-left md:tw-text-[40px] md:tw-leading-[52px]
+                                            lg:tw-text-[56px] lg:tw-leading-[72px]
+                                            xl:tw-text-left xl:tw-text-[62px] xl:tw-leading-[90px]"
                                     style="-webkit-text-fill-color: transparent">
                                     Download
-                                    <br class="hidden md:block" />
+                                    <br class="tw-hidden md:tw-block" />
                                     Free Report
                                     <br />
                                     in 60 Secs
                                 </div>
-                                <a href="{{slide.aElement.href}}" class="w-fit bg-[#1d202f] border-b-[3px] border-r-[3px]
-                                                                            border-white font-bold text-[16px] py-[12px] px-7 tracking-wider
-                                                                            sm:text-[19.2px] sm:py-[10px] sm:px-[30px]"
+                                <a href="{{slide.aElement.href}}" class="tw-w-fit tw-bg-black tw-border-b-[3px] tw-border-r-[3px]
+                                            tw-border-white tw-font-bold tw-text-[16px] tw-py-[12px] tw-px-7 tw-tracking-wider
+                                            sm:tw-text-[19.2px] sm:tw-py-[10px] sm:tw-px-[30px]"
                                     style="box-shadow: 3px 3px 0 0 #1d202f;">{{slide.aElement.text}}</a>
                             </div>
                         </c-carousel-caption>
                     </div>
                     <!-- 2nd & 3rd card -->
-                    <div *ngIf="slide.id==1 || slide.id==2" class="relative">
+                    <div *ngIf="slide.id==1 || slide.id==2" class="tw-relative">
                         <div>
                             <img src="{{slide.bannerMobile}}" alt="{{slide.title}}"
-                                class="object-cover h-[85vh] max-h-[700px] min-h-[600px] w-full lg:hidden"
+                                class="tw-object-cover tw-h-[85vh] tw-max-h-[700px] tw-min-h-[600px] tw-w-full lg:tw-hidden"
                                 loading="lazy" />
                             <img src="{{slide.bannerDesktop}}" alt="{{slide.title}}"
-                                class="object-cover h-[85vh] max-h-[700px] min-h-[600px] w-full hidden lg:block"
+                                class="tw-object-cover tw-h-[85vh] tw-max-h-[700px] tw-min-h-[600px] tw-w-full tw-hidden lg:tw-block"
                                 loading="lazy" />
                         </div>
                         <c-carousel-caption
-                            class="top-0 bottom-[unset] right-[unset] left-[unset] w-full px-3.5 py-7 lg:w-[80%] lg:mx-[10%]">
-                            <div class="max-h-[700px] min-h-[600px] py-0 mx-[4%] md:w-11/12 lg:flex lg:items-center lg:w-6/12 lg:h-full"
-                                [ngClass]="{'lg:ml-[50%]': slide.id == 1, 'lg:ml-14 lg:mr-[50%] text-[#294995]': slide.id == 2}">
+                            class="tw-top-0 tw-bottom-[unset] tw-right-[unset] tw-left-[unset] tw-w-full tw-px-3.5 tw-py-7 lg:tw-w-[80%] lg:tw-mx-[10%]">
+                            <div class="tw-max-h-[700px] tw-min-h-[600px] tw-py-0 mx-[4%] md:tw-w-11/12 lg:tw-flex lg:tw-items-center lg:tw-w-6/12 lg:tw-h-full"
+                                [ngClass]="{'lg:tw-ml-[50%]': slide.id == 1, 'lg:tw-ml-14 lg:tw-mr-[50%] tw-text-[#294995]': slide.id == 2}">
                                 <div
-                                    class="h-full flex flex-col items-center gap-7.5
-                                            sm:gap-6 md:gap-7 lg:justify-center lg:items-start lg:min-w-[480px] lg:max-w-[600px]">
-                                    <p class="uppercase lg:text-left">
+                                    class="tw-h-full tw-flex tw-flex-col tw-items-center tw-gap-7.5
+                                            sm:tw-gap-6 md:tw-gap-7 lg:tw-justify-center lg:tw-items-start lg:tw-min-w-[480px] lg:tw-max-w-[600px]">
+                                    <p class="tw-uppercase lg:tw-text-left">
                                         <b
-                                            class="font-bold text-[27.04px] sm:text-[41.60px] lg:text-[52px]">{{slide.title[0]}}</b>
+                                            class="tw-font-bold tw-text-[27.04px] sm:tw-text-[41.60px] lg:tw-text-[52px]">{{slide.title[0]}}</b>
                                         <br />
-                                        <span class="text-[20.8px] leading-[26px]
-                                                            sm:text-[32px] sm:leading-[33px]
-                                                            lg:text-[40px] lg:leading-[52px]">{{slide.title[1]}}</span>
+                                        <span
+                                            class="tw-text-[20.8px] tw-leading-[26px]
+                                                        sm:tw-text-[32px] sm:tw-leading-[33px]
+                                                        lg:tw-text-[40px] lg:tw-leading-[52px]">{{slide.title[1]}}</span>
                                     </p>
                                     <p
-                                        class="w-[90%] max-w-[550px] text-[17.6px] font-sans leading-6
-                                                        sm:leading-7 sm:text-[20.8px] sm:mt-2
-                                                        lg:w-full lg:max-w-none lg:text-left lg:text-[28.8px] lg:leading-[37px]">
+                                        class="tw-w-[90%] tw-max-w-[550px] tw-text-[17.6px] tw-font-sans tw-leading-6
+                                                        sm:tw-leading-7 sm:tw-text-[20.8px] sm:tw-mt-2
+                                                        lg:tw-w-full lg:tw-max-w-none lg:tw-text-left lg:tw-text-[28.8px] lg:tw-leading-[37px]">
                                         {{slide.subtitle}}</p>
-                                    <a *ngIf="slide.id==1" href="{{slide.aElement.href}}" class="w-fit bg-white border-b-[3px] border-r-[3px] border-[#284b8b]
-                                                font-bold text-[16px] py-[12px] px-7 text-[#1d202f] tracking-wider
-                                                sm:text-[19.2px] sm:py-[10px] sm:px-[50px]"
+                                    <a *ngIf="slide.id==1" href="{{slide.aElement.href}}" class="tw-w-fit tw-bg-white tw-border-b-[3px] tw-border-r-[3px] tw-border-blue
+                                                tw-font-bold tw-text-[16px] tw-py-[12px] tw-px-7 tw-text-black tw-tracking-wider
+                                                sm:tw-text-[19.2px] sm:tw-py-[10px] sm:tw-px-[50px]"
                                         style="box-shadow: 3px 3px 0 0 white;">{{slide.aElement.text}}</a>
-                                    <a *ngIf="slide.id==2" href="{{slide.aElement.href}}" class="w-fit bg-[#1d202f] text-white border-b-[3px] border-r-[3px] border-[#46d2f0]
-                                                font-bold text-[16px] py-[12px] px-7 tracking-wider
-                                                sm:text-[19.2px] sm:py-[10px] sm:px-[50px]"
+                                    <a *ngIf="slide.id==2" href="{{slide.aElement.href}}" class="tw-w-fit tw-bg-black tw-text-white tw-border-b-[3px] tw-border-r-[3px] tw-border-blue-light
+                                                tw-font-bold tw-text-[16px] tw-py-[12px] tw-px-7 tw-tracking-wider
+                                                sm:tw-text-[19.2px] sm:tw-py-[10px] sm:tw-px-[50px]"
                                         style="box-shadow: 3px 3px 0 0 #1d202f;">{{slide.aElement.text}}</a>
                                 </div>
                             </div>
@@ -81,39 +86,39 @@
                     </div>
                     <!-- 4th card -->
                     <div *ngIf="slide.id==3"
-                        class="relative h-[85vh] max-h-[700px] min-h-[600px] lg:mx-auto lg:flex lg:justify-center xl:max-w-[80%]">
-                        <div class="xl:max-w-[1280px]">
+                        class="tw-relative tw-h-[85vh] tw-max-h-[700px] tw-min-h-[600px] lg:tw-mx-auto lg:tw-flex lg:tw-justify-center xl:tw-max-w-[80%]">
+                        <div class="xl:tw-max-w-[1280px]">
                             <img src="{{slide.bannerMobile}}" alt="{{slide.title}}"
-                                class="object-cover h-auto max-h-[700px] w-full pt-[25%] sm:pt-[10%] md:hidden"
+                                class="tw-object-cover tw-h-auto tw-max-h-[700px] tw-w-full tw-pt-[25%] sm:tw-pt-[10%] md:tw-hidden"
                                 loading="lazy" />
-                            <img src="{{slide.bannerDesktop}}" alt="{{slide.title}}" class="object-cover hidden
-                                        md:block md:pt-[8%] md:h-auto md:w-[80%] md:mx-[10%]
-                                        lg:pt-0 lg:w-full lg:max-w-[80%]
-                                        xl:w-full xl:max-w-none xl:mx-0 xl:max-h-[570px] xl:object-fill"
+                            <img src="{{slide.bannerDesktop}}" alt="{{slide.title}}" class="tw-object-cover tw-hidden
+                                        md:tw-block md:tw-pt-[8%] md:tw-h-auto md:tw-w-[80%] md:tw-mx-[10%]
+                                        lg:tw-pt-0 lg:tw-w-full lg:tw-max-w-[80%]
+                                        xl:tw-w-full xl:tw-max-w-none xl:tw-mx-0 xl:tw-max-h-[570px] xl:tw-object-fill"
                                 loading="lazy" />
                         </div>
-                        <c-carousel-caption class="h-fit bottom-[unset] right-[unset] left-[unset] py-0 mx-[4.2%] my-3 top-[71vw]
-                                                    sm:top-[42vw] sm:mx-4 md:top-[36vw] md:px-6
-                                                    lg:top-[unset] lg:bottom-[170px] lg:w-full lg:max-w-[980px]
-                                                    xl:top-[unset] xl:bottom-[60px] xl:mx-0 xl:px-5">
-                            <div class="h-full flex flex-col justify-center gap-[38px]">
-                                <p class="uppercase text-left">
-                                    <span class="text-xl leading-[31px]
-                                                sm:text-[32px] sm:leading-[48px]
-                                                lg:text-[40px] lg:leading-[60px]
-                                                xl:text-[32px] xl:leading-[48px]">{{slide.title[0]}}</span>
+                        <c-carousel-caption class="tw-h-fit tw-bottom-[unset] tw-right-[unset] tw-left-[unset] tw-py-0 tw-mx-[4.2%] tw-my-3 tw-top-[71vw]
+                                                    sm:tw-top-[42vw] sm:tw-mx-4 md:tw-top-[36vw] md:tw-px-6
+                                                    lg:tw-top-[unset] lg:tw-bottom-[170px] lg:tw-w-full lg:tw-max-w-[980px]
+                                                    xl:tw-top-[unset] xl:tw-bottom-[60px] xl:tw-mx-0 xl:tw-px-5">
+                            <div class="tw-h-full tw-flex tw-flex-col tw-justify-center tw-gap-[38px]">
+                                <p class="tw-uppercase tw-text-left">
+                                    <span class="tw-text-xl tw-leading-[31px]
+                                                sm:tw-text-[32px] sm:tw-leading-[48px]
+                                                lg:tw-text-[40px] lg:tw-leading-[60px]
+                                                xl:tw-text-[32px] xl:tw-leading-[48px]">{{slide.title[0]}}</span>
                                     <br />
-                                    <b class="text-[29.12px] leading-10
-                                                sm:text-[44px] sm:leading-[68px]
-                                                lg:text-[56px] lg:leading-[84px]
-                                                xl:text-[45px] xl:leading-[68px]">{{slide.title[1]}}</b>
+                                    <b class="tw-text-[29.12px] tw-leading-10
+                                                sm:tw-text-[44px] sm:tw-leading-[68px]
+                                                lg:tw-text-[56px] lg:tw-leading-[84px]
+                                                xl:tw-text-[45px] xl:tw-leading-[68px]">{{slide.title[1]}}</b>
                                 </p>
                                 <p *ngIf="slide.subtitle"
-                                    class="text-[17.6px] mb-11 mt-7 leading-6 sm:leading-7 sm:mt-[33px] sm:mb-[30px] sm:text-[20.8px]">
+                                    class="tw-text-[17.6px] tw-mb-11 tw-mt-7 tw-leading-6 sm:tw-leading-7 sm:tw-mt-[33px] sm:tw-mb-[30px] sm:tw-text-[20.8px]">
                                     {{slide.subtitle}}</p>
-                                <a href="{{slide.aElement.href}}" class="w-fit bg-white border-b-[3px] border-r-[3px] border-[#1d202f]
-                                            font-bold text-[16px] py-[10px] px-7 text-[#1d202f] tracking-wider
-                                            sm:text-[19.2px] sm:py-[10px] sm:px-[50px]"
+                                <a href="{{slide.aElement.href}}" class="tw-w-fit tw-bg-white tw-border-b-[3px] tw-border-r-[3px] tw-border-black
+                                            tw-font-bold tw-text-[16px] tw-py-[10px] tw-px-7 tw-text-black tw-tracking-wider
+                                            sm:tw-text-[19.2px] sm:tw-py-[10px] sm:tw-px-[50px]"
                                     style="box-shadow: 3px 3px 0 0 white;">{{slide.aElement.text}}</a>
                             </div>
                         </c-carousel-caption>
