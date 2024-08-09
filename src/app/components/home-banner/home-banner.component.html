@@ -1,7 +1,6 @@
 <div class="banner-section bg-[#f6f2f9]">
     <div class="owl-stage-outer">
-        <c-carousel [interval]="0" transition="slide"
-            class="h-[85vh] max-h-[700px] min-h-[600px]">
+        <c-carousel [interval]="0" transition="slide" class="h-[85vh] max-h-[700px] min-h-[600px]">
             <c-carousel-inner class="h-full">
                 <c-carousel-item *ngFor="let slide of slides" [ngClass]="{'bg-[#101113]': slide.id == 3}">
                     <!-- First card -->
@@ -50,8 +49,7 @@
                         </div>
                         <c-carousel-caption
                             class="top-0 bottom-[unset] right-[unset] left-[unset] w-full px-3.5 py-7 lg:w-[80%] lg:mx-[10%]">
-                            <div
-                                class="max-h-[700px] min-h-[600px] py-0 mx-[4%] md:w-11/12 lg:flex lg:items-center lg:w-6/12 lg:h-full"
+                            <div class="max-h-[700px] min-h-[600px] py-0 mx-[4%] md:w-11/12 lg:flex lg:items-center lg:w-6/12 lg:h-full"
                                 [ngClass]="{'lg:ml-[50%]': slide.id == 1, 'lg:ml-14 lg:mr-[50%] text-[#294995]': slide.id == 2}">
                                 <div
                                     class="h-full flex flex-col items-center gap-7.5
@@ -69,13 +67,11 @@
                                                         sm:leading-7 sm:text-[20.8px] sm:mt-2
                                                         lg:w-full lg:max-w-none lg:text-left lg:text-[28.8px] lg:leading-[37px]">
                                         {{slide.subtitle}}</p>
-                                    <a *ngIf="slide.id==1" href="{{slide.aElement.href}}"
-                                        class="w-fit bg-white border-b-[3px] border-r-[3px] border-[#284b8b]
+                                    <a *ngIf="slide.id==1" href="{{slide.aElement.href}}" class="w-fit bg-white border-b-[3px] border-r-[3px] border-[#284b8b]
                                                 font-bold text-[16px] py-[12px] px-7 text-[#1d202f] tracking-wider
                                                 sm:text-[19.2px] sm:py-[10px] sm:px-[50px]"
                                         style="box-shadow: 3px 3px 0 0 white;">{{slide.aElement.text}}</a>
-                                    <a *ngIf="slide.id==2" href="{{slide.aElement.href}}"
-                                        class="w-fit bg-[#1d202f] text-white border-b-[3px] border-r-[3px] border-[#46d2f0]
+                                    <a *ngIf="slide.id==2" href="{{slide.aElement.href}}" class="w-fit bg-[#1d202f] text-white border-b-[3px] border-r-[3px] border-[#46d2f0]
                                                 font-bold text-[16px] py-[12px] px-7 tracking-wider
                                                 sm:text-[19.2px] sm:py-[10px] sm:px-[50px]"
                                         style="box-shadow: 3px 3px 0 0 #1d202f;">{{slide.aElement.text}}</a>
@@ -97,7 +93,7 @@
                                 loading="lazy" />
                         </div>
                         <c-carousel-caption class="h-fit bottom-[unset] right-[unset] left-[unset] py-0 mx-[4.2%] my-3 top-[71vw]
-                                                    sm:top-[42vw] sm:mx-4 md:top-[36vw]
+                                                    sm:top-[42vw] sm:mx-4 md:top-[36vw] md:px-6
                                                     lg:top-[unset] lg:bottom-[170px] lg:w-full lg:max-w-[980px]
                                                     xl:top-[unset] xl:bottom-[60px] xl:mx-0 xl:px-5">
                             <div class="h-full flex flex-col justify-center gap-[38px]">
@@ -115,8 +111,7 @@
                                 <p *ngIf="slide.subtitle"
                                     class="text-[17.6px] mb-11 mt-7 leading-6 sm:leading-7 sm:mt-[33px] sm:mb-[30px] sm:text-[20.8px]">
                                     {{slide.subtitle}}</p>
-                                <a href="{{slide.aElement.href}}"
-                                    class="w-fit bg-white border-b-[3px] border-r-[3px] border-[#1d202f]
+                                <a href="{{slide.aElement.href}}" class="w-fit bg-white border-b-[3px] border-r-[3px] border-[#1d202f]
                                             font-bold text-[16px] py-[10px] px-7 text-[#1d202f] tracking-wider
                                             sm:text-[19.2px] sm:py-[10px] sm:px-[50px]"
                                     style="box-shadow: 3px 3px 0 0 white;">{{slide.aElement.text}}</a>
@@ -126,6 +121,8 @@
                 </c-carousel-item>
             </c-carousel-inner>
             <c-carousel-indicators></c-carousel-indicators>
+            <c-carousel-control [routerLink] caption="Previous" direction="prev"></c-carousel-control>
+            <c-carousel-control [routerLink] caption="Next" direction="next"></c-carousel-control>
         </c-carousel>
     </div>
 </div>
