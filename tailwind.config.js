@@ -1,27 +1,26 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  prefix: 'tw-',
   content: [
     "./src/**/*.{html,ts}",
   ],
   theme: {
     colors: {
-      blue: {
-        light: '#85d7ff',
-        DEFAULT: '#1fb6ff',
-        dark: '#009eeb',
+      'white': {
+        // light: '#85d7ff',
+        DEFAULT: '#fff',
+        // dark: '#009eeb',
       },
-      pink: {
-        light: '#ff7ce5',
-        DEFAULT: '#ff49db',
-        dark: '#ff16d1',
+      'black': {
+        // light: '#85d7ff',
+        DEFAULT: '#1d202f',
+        // dark: '#009eeb',
       },
-      gray: {
-        darkest: '#1f2d3d',
-        dark: '#3c4858',
-        DEFAULT: '#c0ccda',
-        light: '#e0e6ed',
-        lightest: '#f9fafc',
-      }
+      'blue': {
+        light: '#46d2f0',
+        DEFAULT: '#284b8b',
+        dark: '#101113',
+      },
     },
     fontFamily: {
       sans: ['sans-serif'],
@@ -36,16 +35,6 @@ module.exports = {
         '7.5': '30px',
         '21': '84px',
       },
-      textColor: {
-        white: {
-          base: 'var(--color-text-white)'
-        }
-      },
-      gradientColorStops: {
-        skin: {
-          hue: 'var(--color-text-black)'
-        }
-      }
     }
   },
   plugins: [],

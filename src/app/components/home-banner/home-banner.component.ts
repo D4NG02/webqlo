@@ -1,10 +1,16 @@
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common'
-import { ThemeDirective, CarouselComponent, CarouselIndicatorsComponent, CarouselInnerComponent, CarouselItemComponent, CarouselCaptionComponent } from '@coreui/angular';
+import { RouterLink } from '@angular/router';
+import {
+  ThemeDirective, CarouselComponent, CarouselIndicatorsComponent,
+  CarouselInnerComponent, CarouselItemComponent,
+  CarouselCaptionComponent, CarouselControlComponent
+} from '@coreui/angular';
 
 @Component({
-  imports: [NgClass, NgFor, NgIf, NgOptimizedImage, ThemeDirective, CarouselComponent, CarouselIndicatorsComponent, CarouselInnerComponent, CarouselItemComponent, CarouselCaptionComponent],
+  imports: [RouterLink, NgClass, NgFor, NgIf, NgOptimizedImage, ThemeDirective, CarouselComponent, CarouselIndicatorsComponent,
+    CarouselInnerComponent, CarouselItemComponent, CarouselCaptionComponent, CarouselControlComponent],
   selector: 'app-banner',
   standalone: true,
   templateUrl: './home-banner.component.html',

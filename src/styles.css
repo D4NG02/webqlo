@@ -11,13 +11,6 @@
         user-select: none;
     }
 
-    :root {
-        --color-text-white: #FAFAFA;
-        --color-text-black: #1b1b1b;
-        --color-text-black-light: #3b3b3b;
-        --cui-font-sans-serif: "Oswald", sans-serif;
-    }
-
     a {
         background-color: transparent;
         text-decoration: none;
@@ -44,4 +37,28 @@
 
 .carousel-indicators .active.ng-star-inserted {
     background-color: #90a4e4;
+}
+
+
+.carousel-control-next,
+.carousel-control-prev {
+    opacity: 0.5;
+    top: 40%;
+    padding: 4px;
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+    background-color: grey;
+}
+.carousel-control-next:hover,
+.carousel-control-prev:hover {
+    opacity: 1;
+}
+.carousel-control-next {
+    padding-right: 0px;
+    right: 10px;
+}
+.carousel-control-prev {
+    padding-left: 0px;
+    left: 10px;
 }
