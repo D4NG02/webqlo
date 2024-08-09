@@ -13,8 +13,7 @@ import {
     CarouselInnerComponent, CarouselItemComponent, CarouselCaptionComponent, CarouselControlComponent],
   selector: 'app-banner',
   standalone: true,
-  templateUrl: './home-banner.component.html',
-  styleUrl: './home-banner.component.css'
+  templateUrl: './home-banner.component.html'
 })
 export class HomeBannerComponent implements OnInit {
   slides: { id: number, bannerMobile: string, bannerDesktop: string, title: string[], subtitle: string, aElement: { text: string, href: string } }[] = new Array(4)
