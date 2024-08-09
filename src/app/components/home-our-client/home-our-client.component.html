@@ -1,0 +1,28 @@
+<div class="tw-pt-20 tw-pb-28 tw-text-black">
+    <div class="tw-max-w-[1280px] tw-mx-auto tw-px-4 xl:tw-max-w-[80%]">
+        <h2 class="tw-py-8 tw-font-bold tw-uppercase tw-text-center tw-text-xl md:tw-text-3xl">{{title}}</h2>
+
+        <!-- md dsplay all -->
+        <div class="md:tw-hidden">
+            <c-carousel [interval]="0">
+                <c-carousel-inner>
+                    <c-carousel-item *ngFor="let chunkimages of imagesMobile">
+                        <div class="tw-grid tw-grid-cols-2 tw-gap-3">
+                            <div *ngFor="let chunkimage of chunkimages">
+                                <img [src]="chunkimage" alt="client icon" class="tw-object-cover tw-w-full tw-h-auto tw-p-2" loading="lazy" />
+                            </div>
+                        </div>
+                    </c-carousel-item>
+                </c-carousel-inner>
+                <c-carousel-indicators class="tw-relative tw-w-full tw-block tw-mt-8"></c-carousel-indicators>
+                <c-carousel-control [routerLink] caption="Previous" direction="prev"></c-carousel-control>
+                <c-carousel-control [routerLink] caption="Next" direction="next"></c-carousel-control>
+            </c-carousel>
+        </div>
+        <div class="tw-hidden md:tw-grid md:tw-grid-cols-5 md:tw-gap-7">
+            <div *ngFor="let imageDesktop of imagesDesktop">
+                <img src="{{imageDesktop}}" alt="client icon" class="tw-object-cover tw-w-full tw-h-auto tw-p-2" />
+            </div>
+        </div>
+    </div>
+</div>
