@@ -11,6 +11,10 @@
         user-select: none;
     }
 
+    body {
+        font-family: 'Oswald';
+    }
+
     a {
         background-color: transparent;
         text-decoration: none;
