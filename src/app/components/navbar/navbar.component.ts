@@ -8,6 +8,5 @@ import { NgOptimizedImage } from '@angular/common'
   templateUrl: './navbar.component.html'
 })
 export class AppNavbar {
-  logoUrl = "/assets/webqlo.webp"
-  menuIcon = "/assets/menu.svg"
+  logoUrl = "https://www.webqlo.com/images/webqlo.webp"
 }
