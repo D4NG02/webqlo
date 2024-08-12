@@ -21,8 +21,8 @@ export class HomeBannerComponent implements OnInit {
   ngOnInit(): void {
     this.slides[0] = {
       id: 0,
-      bannerMobile: "/assets/main_banner_3.webp",
-      bannerDesktop: "/assets/main_banner_3.webp",
+      bannerMobile: "https://www.webqlo.com/images/home-slider/main_banner_3.webp",
+      bannerDesktop: "https://www.webqlo.com/images/home-slider/main_banner_3.webp",
       title: ['Download Free Report', 'in 60 Secs'],
       subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       aElement: {
@@ -32,8 +32,8 @@ export class HomeBannerComponent implements OnInit {
     };
     this.slides[1] = {
       id: 1,
-      bannerMobile: "/assets/main_banner_1_mobile.webp",
-      bannerDesktop: "/assets/main_banner_1_desktop.webp",
+      bannerMobile: "https://www.webqlo.com/images/home-slider/main_banner_1_mobile.webp",
+      bannerDesktop: "https://www.webqlo.com/images/home-slider/main_banner_1_desktop.webp",
       title: ['360° Data-Driven', 'Digital Marketing Solutions'],
       subtitle: 'We are experts in providing creative solutions backed by data-driven insights.',
       aElement: {
@@ -43,8 +43,8 @@ export class HomeBannerComponent implements OnInit {
     };
     this.slides[2] = {
       id: 2,
-      bannerMobile: "/assets/main_banner_2_mobile.webp",
-      bannerDesktop: "/assets/main_banner_2_desktop.webp",
+      bannerMobile: "https://www.webqlo.com/images/home-slider/main_banner_2_mobile.webp",
+      bannerDesktop: "https://www.webqlo.com/images/home-slider/main_banner_2_desktop.webp",
       title: ['Social Media', 'Intelligence'],
       subtitle: 'Power your digital marketing effort with Adqlo, our proprietary social media intelligence platform.',
       aElement: {
@@ -54,8 +54,8 @@ export class HomeBannerComponent implements OnInit {
     };
     this.slides[3] = {
       id: 3,
-      bannerMobile: "/assets/webqlo-slider-webqlorian.webp",
-      bannerDesktop: "/assets/webqlo-slider-webqlorian.webp",
+      bannerMobile: "https://www.webqlo.com/images/home-slider/webqlo-slider-webqlorian.webp",
+      bannerDesktop: "https://www.webqlo.com/images/home-slider/webqlo-slider-webqlorian.webp",
       title: ['Meet the', '#Webqlorians'],
       subtitle: '',
       aElement: {
